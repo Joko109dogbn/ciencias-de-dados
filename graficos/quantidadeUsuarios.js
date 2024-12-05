@@ -2,6 +2,7 @@ import { getCSS, tickConfig } from "./common.js"
 
 async function quantidadePessoasTransportandos() {
     const url = 'https://raw.githubusercontent.com/Joko109dogbn/ciencias-de-dados/refs/heads/main/baseDeDados/transporte-numero-tipos-locomocao.json'
+    const res = await fetch(url)
     const dados = await res.json()
     const nomeDeTransportadoras= Object.keys(dados)
     const quantidadeDeTransportadoras = Object.values(dados)
